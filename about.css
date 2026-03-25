@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: burlywood;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header */
+.header {
+    background-color: rgba(247, 193, 105, 0.767);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header h2 {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
+.header h2:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.nav-link {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-link a:hover {
+    color: aqua;
+}
+
+/* Introduction */
+.introduction {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.introduction span {
+    font-weight: bold;
+}
+
+.introduction p {
+    font-size: 20px;
+}
+
+/* Education */
+.education {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.education ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.education ul li {
+    margin-bottom: 10px;
+}
+
+/* Skills */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.box {
+    border: 1px solid rgb(206, 142, 60);
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+/* Certificate */
+.certificate {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.certificate p {
+    display: inline-block;
+    border: 1px solid rgba(224, 136, 20, 0.7);
+    border-radius: 25px;
+    padding: 15px 25px;
+    margin-top: 10px;
+}
+
+/* 🔥 MEDIA QUERIES */
+
+/* 📱 Mobile (up to 600px) */
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .introduction p {
+        font-size: 16px;
+    }
+
+    .box {
+        font-size: 16px;
+    }
+}
+
+/* 💻 Tablet & Small Laptop (601px - 1024px) */
+@media (max-width: 1024px) {
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .introduction p {
+        font-size: 18px;
+    }
+}

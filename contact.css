@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: burlywood;
+}
+
+/* Header */
+.header{
+    background-color: rgba(247, 193, 105, 0.767);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+nav a:hover{
+    color: aqua;
+}
+
+/* Contact Section */
+.contact h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Form */
+form{
+    max-width: 350px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    background: white;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: goldenrod;
+}
+
+button:hover{
+    background-color: rgba(218, 165, 32, 0.7);
+}
+
+/* Contact Info */
+.contact-info{
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+/* 📱 MEDIA QUERY (Mobile Responsive) */
+@media (max-width: 768px){
+
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li{
+        display: block;
+        padding: 10px 0;
+    }
+
+    .contact-container{
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    form{
+        width: 90%;
+    }
+}
